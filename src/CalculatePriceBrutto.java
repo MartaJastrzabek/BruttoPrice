@@ -1,7 +1,7 @@
 public class CalculatePriceBrutto {
     private double vat;
 
-    public void checkVat(Product product){
+    private void checkVat(Product product){
 
         String category = product.getCategory();
 
@@ -20,7 +20,7 @@ public class CalculatePriceBrutto {
         }
     }
 
-    public double calculateBrutto(Product product){
+    private double calculateBrutto(Product product){
         checkVat(product);
         return product.getPriceNetto() +(product.getPriceNetto() * vat);
     }
